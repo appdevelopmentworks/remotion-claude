@@ -17,7 +17,11 @@
       "Bash(npm show @remotion/media version)",
       "Bash(npm install @remotion/media)",
       "Bash(npm install remotion@4.0.436 @remotion/cli@4.0.436 @remotion/player@4.0.436)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(findstr \"mediabunny\")",
+      "Bash(dir C:UsershartmDesktopremotion-claudenode_modules /b)",
+      "Bash(findstr /i \"media\")",
+      "Bash(dir node_modules /b)"
     ]
   }
 }

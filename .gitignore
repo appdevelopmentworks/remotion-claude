@@ -6,11 +6,13 @@ node_modules/
 # 容量が大きいので除外（npx remotion render で再生成可能）
 out/
 
-# ─── 音声ファイル ─────────────────────────────────────────────────
-# VOICEVOX で生成したナレーション WAV（npm run voicevox:* で再生成可能）
-# サイズが大きく、かつローカル環境依存のため除外
-public/audio/*.wav
-public/audio/*.WAV
+# ─── 素材ファイル（サイズが大きいため除外）──────────────────────────
+# 音声: VOICEVOX WAV（再生成可能）、BGM・効果音 MP3 など
+public/audio/
+# 写真・画像素材
+public/photos/
+# 動画素材
+public/videos/
 
 # ─── Remotion キャッシュ ──────────────────────────────────────────
 .remotion/

@@ -8,6 +8,7 @@ import { CatMicrochip } from "./CatMicrochip/CatMicrochip";
 import { CAT_TOTAL_FRAMES } from "./CatMicrochip/constants";
 import { Religion } from "./Religion/Religion";
 import { RELIGION_TOTAL_FRAMES } from "./Religion/constants";
+import { TigerShorts, calculateMetadata as tigerShortsMetadata } from "./TigerShorts/TigerShorts";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -56,6 +57,18 @@ export const RemotionRoot: React.FC = () => {
           defaultProps={{
             message: "Remotionで動画をコードで作ろう",
           }}
+        />
+      </Folder>
+
+      <Folder name="shorts">
+        <Composition
+          id="TigerShorts"
+          component={TigerShorts}
+          calculateMetadata={tigerShortsMetadata}
+          durationInFrames={90 * 30} // fallback: 90秒（MP3から自動取得）
+          fps={30}
+          width={1080}
+          height={1920}
         />
       </Folder>
 
