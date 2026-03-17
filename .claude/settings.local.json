@@ -9,7 +9,14 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(npx skills add remotion-dev/skills)",
-      "Bash(npx skills add remotion-dev/skills --yes)"
+      "Bash(npx skills add remotion-dev/skills --yes)",
+      "Bash(npx remotion add @remotion/media)",
+      "Bash(npm install @remotion/media@4.0.290)",
+      "Bash(npm show @remotion/media versions --json)",
+      "Bash(node -e \"const d=require\\(''fs''\\).readFileSync\\(''/dev/stdin'',''utf8''\\); const v=JSON.parse\\(d\\); console.log\\(v.slice\\(-5\\).join\\(''\\\\n''\\)\\);\")",
+      "Bash(npm show @remotion/media version)",
+      "Bash(npm install @remotion/media)",
+      "Bash(npm install remotion@4.0.436 @remotion/cli@4.0.436 @remotion/player@4.0.436)"
     ]
   }
 }

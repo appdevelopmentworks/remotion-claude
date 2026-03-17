@@ -205,6 +205,82 @@ const scale = spring({
 
 ---
 
+## VOICEVOX ナレーターを使う（南極条約動画）
+
+VOICEVOXは無料で使えるテキスト読み上げソフトです。
+日本語の音声ナレーションを自動生成して動画に組み込めます。
+
+### 事前準備
+
+1. [VOICEVOX 公式サイト](https://voicevox.hiroshiba.jp/) からアプリをダウンロードしてインストール
+2. VOICEVOXアプリを起動する（起動したまま以下のコマンドを実行します）
+
+### 手順
+
+```bash
+# ステップ1: ナレーション音声（WAVファイル）を生成する
+#   → public/audio/ に9つの WAV ファイルが作られます
+npm run voicevox
+
+# ステップ2: 9つの WAV を1本にまとめる
+#   → public/audio/antarctic-narration-merged.wav が作られます
+npm run merge-audio
+
+# ステップ3: Studio で音声付き動画を確認する
+npm start
+```
+
+> **ポイント**: ステップ1 の実行中は VOICEVOX アプリが起動していないと失敗します。
+
+### ナレーターを変更したい場合
+
+使用可能なスピーカー（ナレーター）の一覧を確認できます。
+
+```bash
+npm run voicevox:speakers
+```
+
+出力例:
+```
+ずんだもん (ID: 1)
+  ノーマル: 3
+  あまあま: 1
+  ...
+四国めたん (ID: 2)
+  ノーマル: 2
+  ...
+```
+
+`scripts/generate-voicevox.mjs` の先頭にある `DEFAULT_SPEAKER_ID` を
+使いたいナレーターの数値IDに変更してから `npm run voicevox` を再実行してください。
+
+```js
+// scripts/generate-voicevox.mjs の該当箇所
+const DEFAULT_SPEAKER_ID = 3; // ← ここを変更する
+```
+
+### ファイル構成（音声関連）
+
+```
+public/audio/
+├── antarctic-title.wav          ← タイトルシーン
+├── antarctic-intro.wav          ← イントロシーン
+├── antarctic-history.wav        ← 歴史シーン
+├── antarctic-provision-1.wav    ← 第1条
+├── antarctic-provision-2.wav    ← 第2条
+├── antarctic-provision-3.wav    ← 第4条（領土）
+├── antarctic-provision-4.wav    ← 第5条（核）
+├── antarctic-status.wav         ← 現在の状況シーン
+├── antarctic-outro.wav          ← アウトロシーン
+└── antarctic-narration-merged.wav  ← ↑ 全部を結合したもの（動画が参照）
+
+scripts/
+├── generate-voicevox.mjs  ← WAV ファイルを生成するスクリプト
+└── merge-narration.mjs    ← WAV ファイルを1本にまとめるスクリプト
+```
+
+---
+
 ## AI ツールと連携する
 
 このプロジェクトには **Remotion ベストプラクティス スキル** が導入されています。

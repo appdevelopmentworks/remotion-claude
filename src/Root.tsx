@@ -3,6 +3,9 @@ import { HelloWorld } from "./HelloWorld/HelloWorld";
 import { SpringShowcase } from "./SpringShowcase/SpringShowcase";
 import { SequenceDemo } from "./SequenceDemo/SequenceDemo";
 import { TextReveal } from "./TextReveal/TextReveal";
+import { AntarcticTreaty } from "./AntarcticTreaty/AntarcticTreaty";
+import { CatMicrochip } from "./CatMicrochip/CatMicrochip";
+import { CAT_TOTAL_FRAMES } from "./CatMicrochip/constants";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -51,6 +54,26 @@ export const RemotionRoot: React.FC = () => {
           defaultProps={{
             message: "Remotionで動画をコードで作ろう",
           }}
+        />
+      </Folder>
+
+      <Folder name="documentary">
+        <Composition
+          id="AntarcticTreaty"
+          component={AntarcticTreaty}
+          durationInFrames={1440}
+          fps={30}
+          width={1280}
+          height={720}
+        />
+
+        <Composition
+          id="CatMicrochip"
+          component={CatMicrochip}
+          durationInFrames={CAT_TOTAL_FRAMES}
+          fps={30}
+          width={1280}
+          height={720}
         />
       </Folder>
     </>
