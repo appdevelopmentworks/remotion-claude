@@ -6,6 +6,8 @@ import { TextReveal } from "./TextReveal/TextReveal";
 import { AntarcticTreaty } from "./AntarcticTreaty/AntarcticTreaty";
 import { CatMicrochip } from "./CatMicrochip/CatMicrochip";
 import { CAT_TOTAL_FRAMES } from "./CatMicrochip/constants";
+import { Religion } from "./Religion/Religion";
+import { RELIGION_TOTAL_FRAMES } from "./Religion/constants";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -71,6 +73,15 @@ export const RemotionRoot: React.FC = () => {
           id="CatMicrochip"
           component={CatMicrochip}
           durationInFrames={CAT_TOTAL_FRAMES}
+          fps={30}
+          width={1280}
+          height={720}
+        />
+
+        <Composition
+          id="Religion"
+          component={Religion}
+          durationInFrames={RELIGION_TOTAL_FRAMES}
           fps={30}
           width={1280}
           height={720}

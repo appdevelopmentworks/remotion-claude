@@ -59,3 +59,5 @@ Read individual rule files for detailed explanations and code examples:
 - [rules/parameters.md](rules/parameters.md) - Make a video parametrizable by adding a Zod schema
 - [rules/maps.md](rules/maps.md) - Add a map using Mapbox and animate it
 - [rules/voiceover.md](rules/voiceover.md) - Adding AI-generated voiceover to Remotion compositions using ElevenLabs TTS
+- [rules/voicevox.md](rules/voicevox.md) - Adding Japanese TTS narration using VOICEVOX (free local API, no API key required) — WAV generation, WAV merging, Remotion Audio integration
+- [rules/voicevox-captions.md](rules/voicevox-captions.md) - Generating synchronized caption JSON from VOICEVOX WAV files and script text (no Whisper) — phrase splitting, proportional timing, CaptionOverlay component

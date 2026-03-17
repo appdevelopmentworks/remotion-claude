@@ -16,7 +16,8 @@
       "Bash(node -e \"const d=require\\(''fs''\\).readFileSync\\(''/dev/stdin'',''utf8''\\); const v=JSON.parse\\(d\\); console.log\\(v.slice\\(-5\\).join\\(''\\\\n''\\)\\);\")",
       "Bash(npm show @remotion/media version)",
       "Bash(npm install @remotion/media)",
-      "Bash(npm install remotion@4.0.436 @remotion/cli@4.0.436 @remotion/player@4.0.436)"
+      "Bash(npm install remotion@4.0.436 @remotion/cli@4.0.436 @remotion/player@4.0.436)",
+      "Bash(npm install:*)"
     ]
   }
 }

@@ -12,9 +12,14 @@
     "merge-audio": "node scripts/merge-narration.mjs",
     "voicevox:cat": "node scripts/generate-cat-voicevox.mjs",
     "voicevox:cat:speakers": "node scripts/generate-cat-voicevox.mjs --list-speakers",
-    "merge-audio:cat": "node scripts/merge-cat-narration.mjs"
+    "merge-audio:cat": "node scripts/merge-cat-narration.mjs",
+    "voicevox:religion": "node scripts/generate-religion-voicevox.mjs",
+    "voicevox:religion:speakers": "node scripts/generate-religion-voicevox.mjs --list-speakers",
+    "merge-audio:religion": "node scripts/merge-religion-narration.mjs",
+    "captions:religion": "node scripts/generate-religion-captions.mjs"
   },
   "dependencies": {
+    "@remotion/captions": "^4.0.436",
     "@remotion/cli": "^4.0.436",
     "@remotion/media": "^4.0.436",
     "@remotion/player": "^4.0.436",
